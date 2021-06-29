@@ -10,7 +10,7 @@ const config = {
   entry: path.resolve(__dirname, "./src/main.jsx"),
   devtool: !isProd && "eval-source-map",
   output: {
-    path: path.resolve(__dirname, "../docs"),
+    path: path.resolve(__dirname, "../../docs"),
     publicPath: isProd ? "/react-admin" : "/",
   },
   module: {
