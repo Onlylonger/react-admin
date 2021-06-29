@@ -14,12 +14,10 @@
     "site:build": "NODE_ENV=production webpack --config ./site/webpack.config.js"
   },
   "keywords": [
-    "vue",
+    "react",
     "admin"
   ],
-  "peerDependencies": {
-    "vue": "3.1.2"
-  },
+  "peerDependencies": {},
   "author": "onlylonger&shariseMo",
   "license": "ISC",
   "devDependencies": {
@@ -45,5 +43,6 @@
   "dependencies": {},
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "repository": "git@github.com:Onlylonger/react-admin.git"
 }

@@ -30,7 +30,20 @@ const config = {
         test: /\.(css)$/,
         // test: /\.(scss|sass|css)$/,
         // use: ["style-loader", "css-loader", "sass-loader"],
-        use: ["style-loader", "css-loader"],
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                // localIdentName: "[name]_[hash:5]",
+                localIdentName: isProd
+                  ? "[hash:base64]"
+                  : "[path][name]__[local]",
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
@@ -47,9 +60,7 @@ const config = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      // http://link.vuejs.org/feature-flags
-      __VUE_OPTIONS_API__: true,
-      __VUE_PROD_DEVTOOLS__: false,
+      //
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./public/index.tpl"),

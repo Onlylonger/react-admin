@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "devDependencies": {}
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "rc-dialog": "^8.5.2"
+  }
 }
