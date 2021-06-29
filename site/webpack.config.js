@@ -16,7 +16,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.jsx$/i,
         use: [
           {
             loader: "babel-loader",
@@ -27,34 +27,38 @@ const config = {
         ],
       },
       {
-        test: /\.(css)$/,
-        // test: /\.(scss|sass|css)$/,
-        // use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.css$/i,
+        // test: /\.(sa|sc|c)ss$/,
         use: [
-          "style-loader",
+          isProd ? MiniCssExtractPlugin.loader : "style-loader",
           {
             loader: "css-loader",
             options: {
               modules: {
-                // localIdentName: "[name]_[hash:5]",
                 localIdentName: isProd
                   ? "[hash:base64]"
                   : "[path][name]__[local]",
+                getLocalIdent: (context, _, localName) => {
+                  if (context.resourcePath.includes("node_modules")) {
+                    return localName;
+                  }
+                },
               },
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: { plugins: ["autoprefixer"] },
             },
           },
         ],
       },
       {
-        test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 10000,
-            },
-          },
-        ],
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        // 更多信息请点击这里 https://webpack.js.org/guides/asset-modules/
+        type: "asset",
       },
     ],
   },
@@ -66,11 +70,12 @@ const config = {
       template: path.resolve(__dirname, "./public/index.tpl"),
       favicon: path.resolve(__dirname, "./public/favicon.png"),
     }),
-    new MiniCssExtractPlugin(),
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
   },
 };
+
+isProd && config.plugins.push(new MiniCssExtractPlugin());
 
 module.exports = config;

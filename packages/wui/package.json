@@ -9,6 +9,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "rc-dialog": "^8.5.2"
+    "rc-dialog": "^8.5.2",
+    "rc-footer": "^0.6.6"
   }
 }

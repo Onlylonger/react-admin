@@ -1,8 +1,14 @@
 :root {
+  /* $primary: #545270;
+$primaryLight: #817e9e;
+$primaryDark: #2a2a45; */
+
   /* 全局主色 */
-  --primary-color: #1890ff;
+  --primary-color: #545270;
+  /* --primary-color: #1890ff; */
   /* 链接色 */
-  --link-color: #1890ff;
+  --link-color: #817e9e;
+  /* --link-color: #1890ff; */
   /* 成功色 */
   --success-color: #52c41a;
   /* 警告色 */

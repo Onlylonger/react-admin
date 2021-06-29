@@ -1,0 +1,10 @@
+.bg {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg a:hover {
+  color: #fff;
+  /* color: var(--primary-color); */
+  /* color: var(--link-color); */
+}
