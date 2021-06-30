@@ -11,7 +11,7 @@ const config = {
   devtool: !isProd && "eval-source-map",
   output: {
     path: path.resolve(__dirname, "../../docs"),
-    publicPath: isProd ? "/react-admin" : "/",
+    publicPath: isProd ? "/react-admin/" : "/",
   },
   module: {
     rules: [
@@ -58,7 +58,6 @@ const config = {
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
         type: "asset",
-        // type: "asset/resource",
       },
     ],
   },
