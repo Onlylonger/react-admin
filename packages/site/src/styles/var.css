@@ -5,6 +5,8 @@ $primaryDark: #2a2a45; */
 
   /* 全局主色 */
   --primary-color: #545270;
+  /* 深主色 */
+  --primary-dark-color: #2a2a45;
   /* --primary-color: #1890ff; */
   /* 链接色 */
   --link-color: #817e9e;
@@ -23,6 +25,8 @@ $primaryDark: #2a2a45; */
   --text-color: rgba(0, 0, 0, 0.65);
   /* 次文本色 */
   --text-color-secondary: rgba(0, 0, 0, 0.45);
+  /* 辅助文本 */
+  --text-color-middle: #888;
   /* 失效色 */
   --disabled-color: rgba(0, 0, 0, 0.25);
   /* 组件/浮层圆角 */

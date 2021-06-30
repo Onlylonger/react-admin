@@ -9,10 +9,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
+/* body {
   padding-top: 80px;
   height: calc(100% - 80px);
-}
+} */
 
 a {
   color: var(--text-color);
@@ -21,6 +21,6 @@ a {
   font-weight: bold;
 }
 
-a:hover {
+/* a:hover {
   opacity: 0.8;
-}
+} */

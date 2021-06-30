@@ -1,0 +1,20 @@
+.title {
+  margin: 40px auto;
+  font-size: 34px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.desc {
+  margin: 20px auto;
+  text-align: center;
+  color: var(--text-color-middle);
+  letter-spacing: 0.1em;
+}
+
+.img {
+  width: 890px;
+  margin: 40px auto;
+  display: block;
+}
