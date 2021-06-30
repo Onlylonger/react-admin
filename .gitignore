@@ -3,7 +3,7 @@ node_modules
 bin
 dist
 dist-site
-docs
+./docs
 
 
 # 隐藏文件类

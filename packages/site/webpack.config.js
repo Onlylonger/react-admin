@@ -28,7 +28,6 @@ const config = {
       },
       {
         test: /\.css$/i,
-        // test: /\.(sa|sc|c)ss$/,
         use: [
           isProd ? MiniCssExtractPlugin.loader : "style-loader",
           {
@@ -58,6 +57,18 @@ const config = {
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
         type: "asset",
+      },
+      {
+        test: /\.mdx?$/i,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-react"],
+            },
+          },
+          "@mdx-js/loader",
+        ],
       },
     ],
   },

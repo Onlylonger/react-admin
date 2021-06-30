@@ -31,3 +31,10 @@
 .right {
   height: 100%;
 }
+
+.selectedRoute {
+  color: var(--primary-dark-color) !important;
+}
+.selectedRoute .hoverContainer {
+  border-bottom: 2px solid var(--primary-dark-color);
+}
