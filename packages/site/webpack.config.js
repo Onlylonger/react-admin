@@ -57,8 +57,8 @@ const config = {
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-        // 更多信息请点击这里 https://webpack.js.org/guides/asset-modules/
         type: "asset",
+        // type: "asset/resource",
       },
     ],
   },
