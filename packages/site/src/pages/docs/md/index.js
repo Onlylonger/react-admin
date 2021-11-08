@@ -1,5 +1,5 @@
-import ChangeLog from "../../md/changelog.mdx";
-import Install from "../../md/install.mdx";
+import ChangeLog from "./changelog.mdx";
+import Install from "./install.mdx";
 
 const Keys = {};
 ["GUIDE"].forEach((v, k) => (Keys[v] = k));

@@ -1,19 +1,16 @@
 import React from "react";
-import routes from "./routes";
+import Index from "./pages/index";
+import Docs from "./pages/docs";
+import Assets from "./pages/assets";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        {routes.map((route, k) => (
-          <Route
-            exact
-            path={route.path}
-            component={route.component}
-            key={k}
-          ></Route>
-        ))}
+        <Route path="/" component={Index} exact />
+        <Route path="/components" component={Docs} />
+        <Route path="/assets" component={Assets} />
       </Switch>
     </Router>
   );

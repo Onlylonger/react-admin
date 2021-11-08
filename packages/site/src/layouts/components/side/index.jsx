@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
-import sideList from "./config";
+import sideList from "@/pages/docs/md";
 import styles from "./index.css";
 
 const routeRecurison = (routesList) => {
