@@ -1,13 +1,26 @@
-.container {
-  padding-top: 80px;
+.header {
+  height: 80px;
+  background: #fff;
+  position: sticky;
+  top: 0;
 }
 
-.fix {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  z-index: 999;
-  background-color: #fff;
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: calc(100vh - 81px);
+}
+.containter {
+  display: flex;
+  flex: 1 1 auto;
+}
+.side {
+  flex: 0.1;
+}
+.content {
+  flex: 0.9;
+}
+
+.footer {
+  flex: 0 0 auto;
 }

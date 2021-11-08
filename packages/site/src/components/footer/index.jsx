@@ -41,7 +41,7 @@ const WFooter = () => {
           ],
         },
       ]}
-      bottom="Onlylonger ❤️ ShariseMo"
+      bottom={`Onlylonger ❤️ ShariseMo ❤️ QiQi`}
     ></Footer>
   );
 };

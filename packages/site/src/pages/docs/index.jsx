@@ -2,8 +2,8 @@ import React from "react";
 // import { WButton } from "@shilong/wui";
 import Layout from "@/layouts/components";
 
-const Assets = () => {
-  return <Layout>klasdfk</Layout>;
+const Docs = () => {
+  return <Layout />;
 };
 
-export default Assets;
+export default Docs;
